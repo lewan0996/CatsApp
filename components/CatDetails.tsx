@@ -5,7 +5,7 @@ import { RootStackParamList } from "../types";
 
 type CatDetailsProps = NativeStackScreenProps<RootStackParamList, 'catDetails'>;
 
-const textStyle= {
+const textStyle = {
     color: "black"
 }
 

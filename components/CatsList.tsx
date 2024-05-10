@@ -1,7 +1,7 @@
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import axios from "axios";
 import React from "react";
-import { Image, RefreshControl, ScrollView, Text, TouchableHighlight, View } from "react-native";
+import { RefreshControl, ScrollView } from "react-native";
 import { useQuery } from "react-query";
 import { Cat, RootStackParamList } from "../types";
 import { CatItem } from "./CatItem";
@@ -28,7 +28,7 @@ export function CatsList({ navigation }: CatsListProps) {
         <RefreshControl refreshing={catsData.isFetching} onRefresh={catsData.refetch} />
       }>
       {
-        catsData.data?.map(cat =><CatItem cat={cat} navigation={navigation} key={cat.id} />)
+        catsData.data?.map(cat => <CatItem cat={cat} navigation={navigation} key={cat.id} />)
       }
     </ScrollView>
   )
